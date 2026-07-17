@@ -7,15 +7,15 @@ on:
 
 jobs:
    run-script:
-      runs-on: ubuntu-latest
- steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+    runs-on: ubuntu-latest
+    steps:
+       - name: Checkout code
+         uses: actions/checkout@v4
      
-    - name: Set up Node.js
-      uses: actions/setup-node@v4
-      with:
-         node-version: '24'
-
-    - name: Run Node.js Script
-      run: node system-info.js
+       - name: Set up Node.js
+         uses: actions/setup-node@v4
+         with:
+           node-version: '24'
+  
+       - name: Run Node.js Script
+         run: node system-info.js
